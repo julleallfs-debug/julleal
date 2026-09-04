@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Suzano Display";
+  src: url("/SuzanoDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suzano Text";
+  src: url("/SuzanoText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suzano Text";
+  src: url("/SuzanoText-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+:root {
+  color: #17352b;
+  background: #f4f2ec;
+  font-family: "Suzano Text", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.preview-shell {
+  width: min(100% - 40px, 1280px);
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.preview-header {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #23744a;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Suzano Display", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.25rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  margin: 20px 0 0;
+  color: #53665e;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.5;
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.asset-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(23, 53, 43, 0.12);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 44px rgba(23, 53, 43, 0.08);
+}
+
+.asset-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #e8e5dc;
+}
+
+.asset-card figcaption {
+  padding: 16px 20px 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .preview-shell {
+    width: min(100% - 24px, 1280px);
+    padding: 40px 0 56px;
+  }
+
+  .preview-header {
+    margin-bottom: 28px;
+  }
+
+  .asset-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .asset-card {
+    border-radius: 14px;
+  }
+}
